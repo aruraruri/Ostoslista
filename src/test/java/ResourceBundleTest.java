@@ -10,8 +10,24 @@ public class ResourceBundleTest {
 
     @Test
     void testEnglishBundle() {
-    //ResourceBundle rb = ResourceBundle.getBundle("MessagesBundle", new Locale("en", "US"));
-    //Assertions.assertEquals("enUS", rb.getString("lang.eng"));
+        ResourceBundle rb = ResourceBundle.getBundle("MessagesBundle", new Locale("en", "US"));
+        Assertions.assertEquals("Enter amount of eggs", rb.getString("prompt.eggAmt"));
+    }
+
+    @Test
+    void testFinnishBundle() {
+        ResourceBundle rb = ResourceBundle.getBundle("MessagesBundle", new Locale("fi", "FI"));
+        Assertions.assertEquals("Syötä kananmunien määrä", rb.getString("prompt.eggAmt"));
+    }
+    @Test
+    void testJapaneseBundle() {
+        ResourceBundle rb = ResourceBundle.getBundle("MessagesBundle", new Locale("jp", "JP"));
+        Assertions.assertEquals("卵の量を入力してください?", rb.getString("prompt.eggAmt"));
+    }
+    @Test
+    void testSwedishBundle() {
+        ResourceBundle rb = ResourceBundle.getBundle("MessagesBundle", new Locale("swe", "SWE"));
+        Assertions.assertEquals("Hur många tamago?", rb.getString("prompt.eggAmt"));
     }
 
 }

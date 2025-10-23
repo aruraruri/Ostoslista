@@ -33,7 +33,7 @@ public class ShoppingCart {
 
         total = total + ((eggAmt*eggPrice) + (sockAmt*sockPrice));
 
-        System.out.println("Total price of shoppings is: "+total);
+        System.out.println("Total price of shoppings is: "+total+messagesBundle.getString("symbol.currency"));
 
     }
 }
